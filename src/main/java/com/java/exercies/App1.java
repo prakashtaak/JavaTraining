@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class App1 {
-    public static Map<String,String> mapOfData=new HashMap<>();
+
     public int a;
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {

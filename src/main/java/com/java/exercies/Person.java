@@ -2,6 +2,9 @@ package com.java.exercies;
 
 public class Person {
     static int a;
+    //gets called when this class 'Person' is loaded
+    // and one way to load class is using Class.forName("fullyQualifiedClassName")
+    // try with an exercise to get familiar
     static{
         System.out.println("static block called");
        a=10;

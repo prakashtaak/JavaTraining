@@ -2,7 +2,9 @@ package com.java.exercies;
 
 public class StaticVariableExercise {
 
-      static  int counter =0;
+    // class variable, it is shared across all the instance.
+    //we can also say as, it is visible to be used across all instances of this class
+    static  int counter =0;
 
 
 
@@ -29,6 +31,7 @@ public class StaticVariableExercise {
         StaticVariableExercise obj4=new StaticVariableExercise();
         StaticVariableExercise obj5=new StaticVariableExercise();
         StaticVariableExercise obj6=new StaticVariableExercise();
+
 
         System.out.println(StaticVariableExercise.counter);
 
