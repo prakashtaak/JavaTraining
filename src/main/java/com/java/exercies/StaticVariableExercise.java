@@ -30,7 +30,7 @@ public class StaticVariableExercise {
         StaticVariableExercise obj5=new StaticVariableExercise();
         StaticVariableExercise obj6=new StaticVariableExercise();
 
-        System.out.println(obj6.getCountOfObjects());
+        System.out.println(StaticVariableExercise.counter);
 
     }
 
