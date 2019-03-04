@@ -12,7 +12,7 @@ public class App
 
 
     public static void main(String[] args ) throws CloneNotSupportedException, ClassNotFoundException, IllegalAccessException, InstantiationException {
-
+        //loading class using Class.forName utility method
         Class.forName("com.java.exercies.Person");
     //Person person1=new Person("prakash",28,5.8f);
 
@@ -30,7 +30,7 @@ public class App
         System.out.println(obj.computeSomeValue(52));
         System.out.println(obj.computeSomeValue(53));*/
 
-
+        //accessing static variables
         //int value= Constants.VARIABLE_1 ;
 
 
