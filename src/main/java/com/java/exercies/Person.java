@@ -1,16 +1,7 @@
 package com.java.exercies;
 
-public class Person {
-    static int a;
-    //gets called when this class 'Person' is loaded
-    // and one way to load class is using Class.forName("fullyQualifiedClassName")
-    // try with an exercise to get familiar
-    static{
-        System.out.println("static block called");
-       a=10;
-    }
+public class Person implements Comparable<Person>{
 
-    static  int max_val=40;
     private  String name;
     private int age;
     private float height;
@@ -45,7 +36,12 @@ public class Person {
     }
 
 
-    public String print() {
+    public String toString() {
         return "name :"+name+" age :"+age;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.getName().compareTo(o.getName());
     }
 }

@@ -3,15 +3,11 @@ package com.java.inheritanceNAbstractClasses;
 import com.java.compositionNAggregation.Engine;
 
 public abstract class Vehicle {
-
-
     abstract void getVehicleType();
 
     abstract void getVehicleName();
 
     abstract Engine engine();
-
-
 }
 
 class Car extends Vehicle {
