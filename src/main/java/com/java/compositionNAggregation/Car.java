@@ -8,6 +8,9 @@ public class Car {
     private Engine engine;
     private AI ai;
 
+    public Car() {
+    }
+
     public Car(String carName, String brand, double price, Engine engine, AI ai) {
         this.carName = carName;
         this.brand = brand;

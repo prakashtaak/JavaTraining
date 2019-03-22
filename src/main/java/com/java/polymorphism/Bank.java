@@ -1,14 +1,21 @@
 package com.java.polymorphism;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.concurrent.ThreadLocalRandom;
+
 /*
     Example to demonstrate run time polymorphism
  */
-public abstract class Bank {
+public  class Bank {
     private float interestRate ;
     Bank(float interrestRate){
         interestRate=interrestRate;
     }
 
-    abstract float getRateOfInterest();
+    /*abstract float getRateOfInterest();*/
     public float  getRBIIntrestRate(){
         return interestRate;
     }
@@ -25,7 +32,7 @@ class SBI extends Bank{
         super(interestRate);
         this.interestRate=sbiIntrestRate;
     }
-    @Override
+
     public float getRateOfInterest(){return interestRate + getRBIIntrestRate();
     }
 
@@ -44,7 +51,15 @@ class TestPolymorphism{
     public static void main(String args[]){
 
         SBI ob=new SBI(4.0f,4.2f);
+        SBI ob1=new SBI(4.0f,4.2f);
+        SBI ob3 = ob1 = ob;
         System.out.println(ob.getRateOfInterest());
+
+        List<Bank> banks=new ArrayList<>();
+        banks.add(new SBI(23.4f,4.5f));
+
+
+        new LinkedList<Integer>();
         /*Bank b;
         SBI ob=new SBI();
         ob.display();

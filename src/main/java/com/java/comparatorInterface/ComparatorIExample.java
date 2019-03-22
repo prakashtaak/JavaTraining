@@ -4,9 +4,13 @@ import com.java.exercies.Person;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ComparatorIExample {
     String name = "";
+
+
     static Comparator<Person> personComparator = (Person o1, Person o2) -> {
         int finalResult = -1;
         finalResult = o1.getName().compareTo(o2.getName());
@@ -27,8 +31,13 @@ public class ComparatorIExample {
         Arrays.sort(persons,personComparator);
 
        // Arrays.sort(persons);
+        List<Person> personList = Arrays.asList(new Person("prakash",28,5.9f),
+                new Person("prakash",27,5.9f),
+                new Person("Anil",28,5.9f));
 
-        Arrays.stream(persons).forEach(System.out::println);
+        personList.stream().forEach(System.out::println);
+        personList.stream().forEach(System.out::println);
+        System.out.println(personList.size());
     }
 
 }

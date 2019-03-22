@@ -7,12 +7,12 @@ import static com.java.exercies.Constants.DIESEL;
 
 public class CarClient {
 
-    static Car[] getCarOfRequiredType(Car[] cars, int noOfStrokes) {
+    public Car[] getCarOfRequiredType(Car[] cars, int noOfStrokes) {
 
         int carLenght = cars.length;
         Car filteredCars[] = new Car[carLenght];
         int j = 0;
-        for (int i = 0; i < carLenght - 1; i++) {
+        for (int i = 0; i < carLenght ; i++) {
             if (cars[i].getEngine().getNoOfStrokes() == noOfStrokes) {
                 filteredCars[j] = cars[i];
                 j++;
@@ -38,13 +38,13 @@ public class CarClient {
         Car[] cars = {
                 new Car("i10", "hundai", 6.15, engine, ai), car2, car3, car4
         };
-        Car[] result = getCarOfRequiredType(cars, 4);
+       /* Car[] result = getCarOfRequiredType(cars, 4);
         for (Car car : result) {
             if (car != null)
                 System.out.println(car);
-        }
+        }*/
 
         //Arrays.stream(cars).filter(car -> car.getEngine().getNoOfStrokes() == 4).forEach(System.out::println);
-
+    System.out.println(System.getProperty("os.arch"));
     }
 }
