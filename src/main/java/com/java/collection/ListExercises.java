@@ -1,5 +1,7 @@
 package com.java.collection;
 
+
+
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -27,7 +29,7 @@ public class ListExercises {
         List<Integer> integers2 =Arrays.asList(1,2,3,4,5,6,7,89,10);
         Predicate<Integer> isEvenList = x -> x % 2==0;
         //using lamda expression
-       List<Integer> evenNoList = integers1.stream().filter(x -> x % 2==0).collect(Collectors.toList());
+       int evenNoList = integers1.stream().filter(x -> x % 2==0).collect(Collectors.summingInt(x -> x));
         //evenNoList.forEach(System.out::println);
        /* //using Predicates
         integers1.stream().filter(isEvenList).collect(Collectors.toList());
