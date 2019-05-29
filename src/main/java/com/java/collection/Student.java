@@ -1,5 +1,8 @@
 package com.java.collection;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class Student implements Comparable<Student>{
@@ -56,4 +59,17 @@ public class Student implements Comparable<Student>{
     public int hashCode() {
         return Objects.hash(name, age, department, score);
     }
+
+    public static void main(String[] args) {
+
+        int[] arr={2,4,2,5,7,6,1};
+
+        System.out.println(Arrays.binarySearch(arr,4));
+
+
+
+    }
 }
+interface I{}
+class A implements I{}
+class B implements I{}

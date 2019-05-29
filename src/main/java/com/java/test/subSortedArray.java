@@ -4,7 +4,7 @@ public class subSortedArray {
 
     public static void main(String[] args) {
 
-        int[] intArray = {1, 5, 8, 10, 4,5,6, 7, 12, 15};
+            int[] intArray = {1, 5, 8, 10, 4,5,6, 7, 12, 15};
 
         int startSubIndex = -1;
         int j = intArray.length - 1;

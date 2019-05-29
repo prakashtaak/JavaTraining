@@ -29,6 +29,7 @@ public class CoinProblem {
     }
     public static void main(String[] args) {
         int[] coins = {1,5};
+        String str=new String("");
         System.out.println(combo(coins,1,5));
     }
 
