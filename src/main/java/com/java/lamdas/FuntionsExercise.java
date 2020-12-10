@@ -1,5 +1,6 @@
 package com.java.lamdas;
 
+import java.util.Arrays;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -11,12 +12,15 @@ public class FuntionsExercise {
 
 
     public static void main(String[] args){
-        IntStream.range(0,15).filter(t -> func.test(t));
-        ExtendedConverter obj=new ExtendedConverter();
-        Function<Double,Double> intermRes = obj.curry1(10.0).andThen(a -> a+32);
+       IntStream.range(0,15).filter(t -> func.test(t));
+       ExtendedConverter obj=new ExtendedConverter();
+       Function<Double,Double> intermRes = obj.curry1(10.0).andThen(a -> a+32);
        System.out.println(intermRes.apply(2.0));
        Integer i=90;
        int j=i;
+       Arrays.asList(1,2,3,4,5,6).stream().map(x -> new String(x.toString())).map(y -> new Integer(y));
+
+
     }
 
 
@@ -28,12 +32,12 @@ class UtilFunctions{
     }
 }
 
-@FunctionalInterface
-interface MyFunction{
-
-    public boolean test(int i);
-}
   class ExtendedConverter implements Converter<Double,Double,Double>{
+      @FunctionalInterface
+      interface MyFunction{
+
+          public boolean test(int i);
+      }
 
       @Override
       public Double apply(Double aDouble, Double aDouble2) {

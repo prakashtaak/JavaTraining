@@ -52,6 +52,9 @@ public class HashMapExercise {
         });*/
 
         //Collections.sort(students);
+        Comparator<Student> comparator=Comparator.comparing(Student::getAge);
+        comparator.thenComparing(Student::getName);
+        Collections.sort(students,(a,b)  -> a.getAge() -  b.getAge());
 
         Map<String,List<Student>> sortedKeysMap =new TreeMap<>();
         sortedKeysMap = students.stream().collect(groupingBy(Student::getDepartment,TreeMap::new,mapping(e -> e,toList())));
@@ -59,6 +62,8 @@ public class HashMapExercise {
         sortedKeysMap.forEach((x,y) -> {
             System.out.println("key "+ x + " value "+ y);
         });
+
+
 
        /* studentByDepartment = students.stream().collect(groupingBy(Student::getDepartment));
 
